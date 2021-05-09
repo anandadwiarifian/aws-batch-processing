@@ -31,7 +31,7 @@ Or just execute the [sql script](/setup/postgres/create_user_purchase.sql) by ru
 
 `\i setup/postgres/create_user_purchase.sql`
 
-The pg table are now ready to act as the data source.
+The pg table is now ready to act as the data source.
 
 ### Create the table in Amazon Redshift
 To access the Redshift from our script, we need to create a redshift cluster.
@@ -72,12 +72,18 @@ load user purchase data from S3 bucket to redshift, partitioned by date.
 The final task that doesn't do anything (dummy task)
 
 Before you turn on the DAG, in the airflow GUI, `Admin -> Connections` then add `{"aws_access_key_id":"your_access_key", "aws_secret_access_key": "your_secret_ccess_key"}` in `Extra` field in `aws_default` connection.
-There's a better and more secure way to give the AWS credentials to Airflow, though. I will add it in the next repo.
-
 
 The screenshot of the airflow GUI:
+![DAG: Graph View](https://user-images.githubusercontent.com/47022822/117568817-c2afbe80-b0ec-11eb-89d9-465058967029.PNG)
+![DAG: Tree View](https://user-images.githubusercontent.com/47022822/117568829-d824e880-b0ec-11eb-953e-22c12f9fff03.PNG)
 
 The screenshot of S3 bucket:
+![s3 bucket](https://user-images.githubusercontent.com/47022822/117568850-ea068b80-b0ec-11eb-9694-8c570db32283.PNG)
+![s3 bucket](https://user-images.githubusercontent.com/47022822/117568852-ec68e580-b0ec-11eb-83ef-264d6c4802ff.PNG)
 
 The screenshot of database in Redshift:
+![user_purchase_staging schema](https://user-images.githubusercontent.com/47022822/117569013-ae1ff600-b0ed-11eb-8baa-40e750ea5921.PNG)
+![user_purchase_staging preview](https://user-images.githubusercontent.com/47022822/117568998-95174500-b0ed-11eb-8bc5-610cafbde62b.PNG)
+
+
 
