@@ -1,6 +1,6 @@
 # Batch Processing in AWS
 The project simulates the flow of retail sales data from an online shop. The data from the online shop is stored in S3 bucket as the staging area, and then loaded to Amazon Redshift.
-![image](https://user-images.githubusercontent.com/47022822/119691422-c2e1e500-be74-11eb-9a63-78930d86242b.png)
+![image](https://user-images.githubusercontent.com/47022822/119693451-7f887600-be76-11eb-81e3-dc59c40687a2.png)
 
 AWS account is needed to run this repo. 
 Get your AWS access key and secret key by `clicking on your name -> My Security Credentials` in the AWS website.
