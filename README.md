@@ -1,10 +1,6 @@
 # Batch Processing in AWS
 The project simulates the flow of retail sales data from an online shop. The data from the online shop is stored in S3 bucket as the staging area, and then loaded to Amazon Redshift.
-
-I use docker to create 2 containers: airflow and postgres
-
-Airflow is used to orchastrate the process.
-Postgres is used to act as the data source of the retail sales data.
+![image](https://user-images.githubusercontent.com/47022822/119691422-c2e1e500-be74-11eb-9a63-78930d86242b.png)
 
 AWS account is needed to run this repo. 
 Get your AWS access key and secret key by `clicking on your name -> My Security Credentials` in the AWS website.
@@ -15,7 +11,7 @@ First, run the containers by `cd`-ing to the project file and running this code.
 ```
 docker-compose -f docker-compose-LocalExecutor.yml up -d
 ```
-The docker should be up and running now. 
+The postgres and airflow container should be up and running now. 
 
 ### Create table and load the user purchase data to the 'data store' 
 Create a postgres connection using pgcli.
